@@ -1,36 +1,178 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Money n Play
+
+A modern Next.js application with TypeScript, featuring Material UI, Tailwind CSS, dark/light mode, multi-language support, and Convex backend.
+
+## Features
+
+- ✅ **Next.js 15** with App Router
+- ✅ **TypeScript** for type safety
+- ✅ **Tailwind CSS** for utility-first styling
+- ✅ **Material UI (MUI)** for beautiful React components
+- ✅ **Dark/Light Mode** toggle with persistent theme
+- ✅ **Internationalization (i18n)** with English and Spanish support using next-intl
+- ✅ **Convex Backend** for real-time data synchronization
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ installed
+- npm or yarn package manager
+
+### Installation
+
+Dependencies are already installed. If you need to reinstall:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Start the Convex backend (in a separate terminal):
+```bash
+npx convex dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Run the Next.js development server:
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser. The app will automatically redirect to the English version at `/en`.
+
+### Available Routes
+
+- `/en` - English version
+- `/es` - Spanish version (Español)
+
+## Project Structure
+
+```
+├── app/
+│   ├── [locale]/              # Internationalized routes
+│   │   ├── layout.tsx         # Main layout with providers
+│   │   ├── page.tsx           # Home page
+│   │   └── ConvexClientProvider.tsx
+│   ├── globals.css            # Global styles
+│   └── layout.tsx             # Root layout
+├── components/
+│   ├── ThemeToggle.tsx        # Dark/Light mode switcher
+│   └── LanguageSwitcher.tsx   # Language selector
+├── contexts/
+│   └── ThemeContext.tsx       # Theme context provider
+├── convex/
+│   └── example.ts             # Example Convex query
+├── i18n/
+│   ├── request.ts             # i18n configuration
+│   └── routing.ts             # Routing configuration
+├── messages/
+│   ├── en.json                # English translations
+│   └── es.json                # Spanish translations
+└── middleware.ts              # Next.js middleware for i18n
+```
+
+## Key Technologies
+
+### Theme Management
+The app uses Material UI's theming system with a custom `ThemeProvider` that persists the user's preference in localStorage.
+
+### Internationalization
+Powered by `next-intl`, the app supports:
+- Automatic locale detection
+- URL-based locale switching (`/en`, `/es`)
+- Translation files in JSON format
+- Type-safe translation keys
+
+### Convex Backend
+Convex provides:
+- Real-time data synchronization
+- Type-safe database queries
+- Serverless functions
+- Authentication (ready to implement)
+
+## Customization
+
+### Adding a New Language
+
+1. Add locale to `i18n/routing.ts`:
+```typescript
+export const routing = defineRouting({
+  locales: ['en', 'es', 'fr'], // Add 'fr'
+  defaultLocale: 'en'
+});
+```
+
+2. Create translation file `messages/fr.json`
+
+3. Update the language switcher in `components/LanguageSwitcher.tsx`
+
+### Customizing Theme
+
+Edit `contexts/ThemeContext.tsx` to modify colors and typography:
+
+```typescript
+const theme = useMemo(
+  () =>
+    createTheme({
+      palette: {
+        mode,
+        primary: {
+          main: '#your-color', // Customize
+        },
+      },
+    }),
+  [mode]
+);
+```
+
+## Using Convex
+
+Example query in `convex/example.ts`:
+
+```typescript
+import { query } from "./_generated/server";
+
+export const get = query({
+  args: {},
+  handler: async () => {
+    return "Hello from Convex!";
+  },
+});
+```
+
+Use in components:
+```typescript
+import { useQuery } from "convex/react";
+import { api } from "@/convex/_generated/api";
+
+const message = useQuery(api.example.get);
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Material UI](https://mui.com/)
+- [next-intl](https://next-intl-docs.vercel.app/)
+- [Convex](https://docs.convex.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Deploy to Vercel
 
-## Deploy on Vercel
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Add environment variables from `.env.local`
+4. Deploy!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deploy Convex
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Convex is automatically deployed when you run:
+```bash
+npx convex deploy
+```
+
+## License
+
+MIT

@@ -1,0 +1,18 @@
+{
+  "welcome": "Welcome to Money n Play",
+  "description": "A Next.js app with TypeScript, Tailwind CSS, Material UI, and Convex",
+  "darkMode": "Dark Mode",
+  "lightMode": "Light Mode",
+  "language": "Language",
+  "home": "Home",
+  "about": "About",
+  "features": {
+    "title": "Features",
+    "typescript": "TypeScript Support",
+    "tailwind": "Tailwind CSS",
+    "materialui": "Material UI Components",
+    "darkmode": "Dark/Light Mode Toggle",
+    "i18n": "Multi-language Support",
+    "convex": "Convex Backend"
+  }
+}

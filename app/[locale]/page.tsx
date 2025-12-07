@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import { 
   Card, 
@@ -12,9 +14,10 @@ import {
 } from '@mui/material';
 import ThemeToggle from '@/components/ThemeToggle';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { Link } from '@/i18n/routing';
+import { useRouter } from '@/i18n/routing';
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <AppBar position="static">
@@ -38,8 +41,7 @@ export default function Home() {
           
           <Stack direction="row" spacing={2} justifyContent="center" sx={{ mt: 4 }}>
             <Button
-              component={Link}
-              href="/child"
+              onClick={() => router.push('/child')}
               variant="contained"
               size="large"
               sx={{ px: 4, py: 1.5 }}
@@ -47,8 +49,7 @@ export default function Home() {
               🎮 Kid Dashboard Demo
             </Button>
             <Button
-              component={Link}
-              href="/parent"
+              onClick={() => router.push('/parent')}
               variant="outlined"
               size="large"
               sx={{ px: 4, py: 1.5 }}

@@ -8,7 +8,9 @@
  * @module
  */
 
+import type * as dashboard from "../dashboard.js";
 import type * as example from "../example.js";
+import type * as seed from "../seed.js";
 import type * as users from "../users.js";
 import type * as wallets from "../wallets.js";
 
@@ -19,7 +21,9 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  dashboard: typeof dashboard;
   example: typeof example;
+  seed: typeof seed;
   users: typeof users;
   wallets: typeof wallets;
 }>;

@@ -7,10 +7,12 @@ import {
   Container,
   AppBar,
   Toolbar,
-  Stack
+  Stack,
+  Button
 } from '@mui/material';
 import ThemeToggle from '@/components/ThemeToggle';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { Link } from '@/i18n/routing';
 
 export default function Home() {
   return (
@@ -30,9 +32,30 @@ export default function Home() {
           <Typography variant="h2" component="h1" gutterBottom>
             <WelcomeMessage />
           </Typography>
-          <Typography variant="h6" color="text.secondary">
+          <Typography variant="h6" color="text.secondary" paragraph>
             <DescriptionMessage />
           </Typography>
+          
+          <Stack direction="row" spacing={2} justifyContent="center" sx={{ mt: 4 }}>
+            <Button
+              component={Link}
+              href="/child"
+              variant="contained"
+              size="large"
+              sx={{ px: 4, py: 1.5 }}
+            >
+              🎮 Kid Dashboard Demo
+            </Button>
+            <Button
+              component={Link}
+              href="/parent"
+              variant="outlined"
+              size="large"
+              sx={{ px: 4, py: 1.5 }}
+            >
+              👨‍👩‍👧 Parent Dashboard
+            </Button>
+          </Stack>
         </Box>
 
         <Stack spacing={3}>

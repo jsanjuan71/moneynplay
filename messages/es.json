@@ -14,5 +14,68 @@
     "darkmode": "Alternador Modo Oscuro/Claro",
     "i18n": "Soporte Multi-idioma",
     "convex": "Backend Convex"
+  },
+  "kid": {
+    "dashboard": {
+      "title": "Mi Panel",
+      "greeting": "¡Hola {name}! 👋",
+      "mascotWelcome": "¡Hola! ¡Soy Cash, tu amigo del dinero!",
+      "quickStats": "Tu Dinero de un Vistazo"
+    },
+    "wallet": {
+      "title": "Mi Billetera 💰",
+      "realMoney": "Dinero Real",
+      "virtualCoins": "Monedas de Juego",
+      "savings": "Alcancía de Ahorros",
+      "investments": "Dinero Futuro",
+      "total": "Total Dinero Real",
+      "addMoney": "Pide a tus Padres Agregar Dinero",
+      "emptyWallet": "¡Tu billetera está vacía! Pide a tus padres que agreguen dinero.",
+      "coins": "monedas"
+    },
+    "missions": {
+      "title": "Misiones 🎯",
+      "active": "Misiones Activas",
+      "available": "Misiones Disponibles",
+      "completed": "Completadas",
+      "startMission": "Comenzar Misión",
+      "continueMission": "Continuar",
+      "claimReward": "¡Reclamar Recompensa!",
+      "reward": "Recompensa",
+      "progress": "Progreso",
+      "noActive": "¡Aún no hay misiones activas!",
+      "noAvailable": "¡Vuelve pronto para nuevas misiones!",
+      "completedToday": "¡Completaste {count} misiones hoy! 🎉"
+    },
+    "avatar": {
+      "title": "Mi Avatar",
+      "customize": "Personalizar",
+      "viewProfile": "Ver Perfil",
+      "changeOutfit": "Cambiar Vestimenta"
+    },
+    "navigation": {
+      "home": "Inicio",
+      "missions": "Misiones",
+      "shop": "Tienda",
+      "friends": "Amigos",
+      "marketplace": "Mercado",
+      "learn": "Aprender"
+    },
+    "actions": {
+      "transfer": "Mover Dinero",
+      "save": "Ahorrar Dinero",
+      "invest": "Invertir",
+      "shop": "Ir de Compras",
+      "viewAll": "Ver Todo"
+    },
+    "achievements": {
+      "title": "Logros 🏆",
+      "recent": "Insignias Recientes",
+      "viewAll": "Ver Todas las Insignias"
+    },
+    "activity": {
+      "title": "Actividad Reciente",
+      "viewHistory": "Ver Historial"
+    }
   }
 }

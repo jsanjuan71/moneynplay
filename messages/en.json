@@ -14,5 +14,68 @@
     "darkmode": "Dark/Light Mode Toggle",
     "i18n": "Multi-language Support",
     "convex": "Convex Backend"
+  },
+  "kid": {
+    "dashboard": {
+      "title": "My Dashboard",
+      "greeting": "Hey {name}! 👋",
+      "mascotWelcome": "Hi there! I'm Cash, your money buddy!",
+      "quickStats": "Your Money at a Glance"
+    },
+    "wallet": {
+      "title": "My Wallet 💰",
+      "realMoney": "Real Money",
+      "virtualCoins": "Play Coins",
+      "savings": "Savings Jar",
+      "investments": "Future Money",
+      "total": "Total Real Money",
+      "addMoney": "Ask Parent to Add Money",
+      "emptyWallet": "Your wallet is empty! Ask your parent to add some money.",
+      "coins": "coins"
+    },
+    "missions": {
+      "title": "Missions 🎯",
+      "active": "Active Missions",
+      "available": "Available Missions",
+      "completed": "Completed",
+      "startMission": "Start Mission",
+      "continueMission": "Continue",
+      "claimReward": "Claim Reward!",
+      "reward": "Reward",
+      "progress": "Progress",
+      "noActive": "No active missions yet!",
+      "noAvailable": "Check back soon for new missions!",
+      "completedToday": "You completed {count} missions today! 🎉"
+    },
+    "avatar": {
+      "title": "My Avatar",
+      "customize": "Customize",
+      "viewProfile": "View Profile",
+      "changeOutfit": "Change Outfit"
+    },
+    "navigation": {
+      "home": "Home",
+      "missions": "Missions",
+      "shop": "Shop",
+      "friends": "Friends",
+      "marketplace": "Marketplace",
+      "learn": "Learn"
+    },
+    "actions": {
+      "transfer": "Move Money",
+      "save": "Save Money",
+      "invest": "Invest",
+      "shop": "Go Shopping",
+      "viewAll": "View All"
+    },
+    "achievements": {
+      "title": "Achievements 🏆",
+      "recent": "Recent Badges",
+      "viewAll": "View All Badges"
+    },
+    "activity": {
+      "title": "Recent Activity",
+      "viewHistory": "View History"
+    }
   }
 }

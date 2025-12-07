@@ -2,7 +2,22 @@
 
 A modern Next.js application with TypeScript, featuring Material UI, Tailwind CSS, dark/light mode, multi-language support, and Convex backend.
 
+**Money n Play** is a fun, educational finance app for kids (ages 6–14) where parents can add real money, while kids make decisions with it inside a safe, gamified environment. Kids learn financial habits through missions, simulations, avatars, stories, and interactive dashboards.
+
+## 📚 Documentation
+
+- **[Quick Start Guide](./docs/QUICK_START.md)** - Choose your path and start building!
+- **[Architecture & Roadmap](./docs/ARCHITECTURE.md)** - Complete technical overview
+
 ## Features
+
+### 🎯 App Concept
+- **For Parents**: Add real money, approve actions, set allowances, track progress
+- **For Kids**: Make financial decisions, earn virtual coins, complete missions, customize avatars
+- **Safe Environment**: Real money non-withdrawable, parent approval required, COPPA-minded
+- **Educational**: Learn through gamification, missions, videos, and interactive stories
+
+### 🛠️ Tech Stack
 
 - ✅ **Next.js 15** with App Router
 - ✅ **TypeScript** for type safety

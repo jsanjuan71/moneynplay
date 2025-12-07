@@ -9,6 +9,8 @@
  */
 
 import type * as example from "../example.js";
+import type * as users from "../users.js";
+import type * as wallets from "../wallets.js";
 
 import type {
   ApiFromModules,
@@ -18,6 +20,8 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   example: typeof example;
+  users: typeof users;
+  wallets: typeof wallets;
 }>;
 
 /**
